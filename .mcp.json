@@ -4,7 +4,7 @@
       "command": "uvx",
       "args": ["nanobanana-mcp-server==0.4.6"],
       "env": {
-        "GEMINI_API_KEY": "placeholder-key-injected-by-proxy"
+        "GEMINI_API_KEY": "${GEMINI_API_KEY:-placeholder-key-injected-by-proxy}"
       }
     }
   }

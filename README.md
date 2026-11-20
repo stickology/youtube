@@ -5,7 +5,7 @@ YouTube channel workspace with two skill packs installed project-local in `.clau
 - [youtube-agent-skill](https://github.com/Jakeschincariol/youtube-agent-skill) (MIT): the `/yt-*` commands
 - [claude-youtube](https://github.com/AgriciDaniel/claude-youtube) (MIT): the `/youtube` command, including `/youtube thumbnail`
 
-`.mcp.json` registers the NanoBanana MCP server for Gemini thumbnail generation. The API key is not stored in the repo; in Claude Code cloud sessions it is injected by the environment's network secret for `generativelanguage.googleapis.com`.
+`.mcp.json` registers the NanoBanana MCP server for Gemini thumbnail generation. The API key is not stored in the repo; it is read from the `GEMINI_API_KEY` environment variable, or injected by a network secret for `generativelanguage.googleapis.com` (header `x-goog-api-key`).
 
 Commands: `/yt-script`, `/yt-package`, `/yt-edit`, `/yt-comment`, `/yt-plan`, `/yt-viral`, `/yt-retention`, `/yt-shorts`, `/yt-seo`, `/yt-chapters`, `/yt-audit`.
 
